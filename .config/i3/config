@@ -219,11 +219,26 @@ bar {
         }
 }
 
+# Assign Google Chrome to workspace 1
+assign [class="google-chrome"] 1
+
+# Assign Discord to workspace 2
+assign [class="discord"] 2
+
+# Assign VSCode to workspace 3
+assign [class="code-oss"] 3
+
+# Assign Spotify to workspace 4
+for_window [class="Spotify"] move container to workspace $ws4
+
 # Start dunst
 exec --no-startup-id dunst 
 
 # Start pasystray
 exec --no-startup-id pasystray
+
+# Start redshift (Philadelphia)
+exec --no-startup-id redshift-gtk -l 39.95238:-75.16362
 
 # Start picom
 exec --no-startup-id picom -b
@@ -231,4 +246,14 @@ exec --no-startup-id picom -b
 # Start wal
 exec --no-startup-id wal -R
 
+# Start Google Chrome
+exec google-chrome-stable
 
+# Start Discord
+exec discord
+
+# Start VSCode
+exec code
+
+# Start Spotify
+exec spotify-launcher
