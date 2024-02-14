@@ -219,14 +219,17 @@ bar {
         }
 }
 
-# Assign Google Chrome to workspace 1
-assign [class="google-chrome"] 1
+# Change workspace layout to stacking
+workspace_layout tabbed
 
-# Assign Discord to workspace 2
-assign [class="discord"] 2
+# Assign Firefox to workspace 1
+assign [class="firefox"] 1
 
-# Assign VSCode to workspace 3
-assign [class="code-oss"] 3
+# Assign VSCode to workspace 2
+assign [class="code-oss"] 2
+
+# Assign Discord to workspace 3
+assign [class="discord"] 3
 
 # Assign Spotify to workspace 4
 for_window [class="Spotify"] move container to workspace $ws4
@@ -238,7 +241,7 @@ exec --no-startup-id dunst
 exec --no-startup-id pasystray
 
 # Start redshift (Philadelphia)
-exec --no-startup-id redshift-gtk -l 39.95238:-75.16362
+exec_always --no-startup-id redshift-gtk -P -O 2400
 
 # Start picom
 exec --no-startup-id picom -b
@@ -246,8 +249,8 @@ exec --no-startup-id picom -b
 # Start wal
 exec --no-startup-id wal -R
 
-# Start Google Chrome
-exec google-chrome-stable
+# Start Firefox
+exec firefox
 
 # Start Discord
 exec discord
