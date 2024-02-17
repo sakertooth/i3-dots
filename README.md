@@ -7,3 +7,4 @@ My i3 config
 * i3status
 * picom
 * pywal
+* maim
