@@ -260,6 +260,5 @@ exec code
 exec spotify-launcher
 
 # Make file manager float
-for_window [class="nemo"] floating enable
-for_window [class="nemo"] floating_minimum_size 320 x 240
-for_window [class="nemo"] floating_maximum_size 320 x 240
+for_window [class="Nemo"] floating enable
+for_window [class="Nemo"] resize set 960 720
