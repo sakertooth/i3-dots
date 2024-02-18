@@ -219,9 +219,6 @@ bar {
         }
 }
 
-# Change workspace layout to stacking
-workspace_layout tabbed
-
 # Assign Firefox to workspace 1
 assign [class="firefox"] 1
 
