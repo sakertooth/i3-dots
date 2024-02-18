@@ -8,6 +8,7 @@ order += "load"
 order += "memory"
 order += "disk /"
 order += "battery 0"
+order += "volume master"
 order += "time"
 
 load {
@@ -43,6 +44,13 @@ battery 0 {
 
 time {
     format = "%b %d %l:%M %P"
+    separator = false
+    separator_block_width = 25
+}
+
+volume master {
+    format = "󰖀 %volume"
+    format_muted = "󰖀 muted (%volume)"
     separator = false
     separator_block_width = 25
 }
