@@ -262,3 +262,7 @@ exec spotify-launcher
 # Make file manager float
 for_window [class="Nemo"] floating enable
 for_window [class="Nemo"] resize set 960 720
+
+# Make pavucontrol float
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Pavucontrol"] resize set 960 720
