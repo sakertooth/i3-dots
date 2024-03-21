@@ -238,9 +238,6 @@ exec --no-startup-id dunst
 # Start pasystray
 exec --no-startup-id pasystray
 
-# Start redshift (Philadelphia)
-exec_always --no-startup-id redshift-gtk -P -O 2400
-
 # Start picom
 exec --no-startup-id picom -b
 
