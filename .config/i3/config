@@ -46,7 +46,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5-
 
 # Use maim to take screenshots
-bindsym Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png -i
+bindsym Print exec --no-startup-id maim -s | tee ~/Pictures/$(date +%s).png | xclip -selection clipboard -t image/png
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -255,11 +255,3 @@ exec code
 
 # Start Spotify
 exec spotify-launcher
-
-# Make file manager float
-for_window [class="Nemo"] floating enable
-for_window [class="Nemo"] resize set 960 720
-
-# Make pavucontrol float
-for_window [class="Pavucontrol"] floating enable
-for_window [class="Pavucontrol"] resize set 960 720
