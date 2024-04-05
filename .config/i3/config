@@ -226,9 +226,11 @@ exec --no-startup-id dunst
 # Start pasystray
 exec --no-startup-id pasystray
 
+# Start mictray
+exec --no-startup-id mictray
+
 # Start picom
 exec --no-startup-id picom -b
 
 # Start wal
 exec --no-startup-id wal -R
-
