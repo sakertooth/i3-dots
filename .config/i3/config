@@ -220,6 +220,18 @@ bar {
         }
 }
 
+# Assign Alacritty to workspace 1
+assign [class="Alacritty"] 1
+
+# Assign Firefox to workspace 2
+assign [class="firefox"] 2
+
+# Assign VSCode to workspace 3
+assign [class="code-oss"] 3
+
+# Assign Discord to workspace 4
+assign [class="discord"] 4
+
 # Start dunst
 exec --no-startup-id dunst 
 
@@ -229,8 +241,17 @@ exec --no-startup-id pasystray
 # Start mictray
 exec --no-startup-id mictray
 
-# Start picom
-exec --no-startup-id picom -b
-
 # Start wal
 exec --no-startup-id wal -R
+
+# Start terminal
+exec --no-startup-id i3-sensible-terminal 
+
+# Start firefox
+exec --no-startup-id firefox
+
+# Start vscode
+exec --no-startup-id code
+
+# Start discord
+exec --no-startup-id discord
