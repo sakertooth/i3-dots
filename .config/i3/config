@@ -196,9 +196,11 @@ bar {
         status_command i3status
 }
 
+# Start picom
+exec --no-startup-id picom -b
+
+# Start feh
 exec_always --no-startup-id ~/.fehbg & 
-
-
 
 # Assign Alacritty to workspace 1
 assign [class="Alacritty"] 1
