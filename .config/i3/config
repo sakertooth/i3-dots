@@ -190,12 +190,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-}
-
 # Start picom
 exec --no-startup-id picom -b
 
@@ -219,3 +213,43 @@ exec --no-startup-id discord
 
 # Start terminal
 exec --no-startup-id i3-sensible-terminal
+
+# Load color scheme from .Xresources
+set_from_resource $color0 i3wm.color0 #180000
+set_from_resource $color1 i3wm.color1 #907848
+set_from_resource $color2 i3wm.color2 #181800
+set_from_resource $color3 i3wm.color3 #f0c060
+set_from_resource $color4 i3wm.color4 #d8a848
+set_from_resource $color5 i3wm.color5 #786048
+set_from_resource $color6 i3wm.color6 #c09048
+set_from_resource $color7 i3wm.color7 #ffd878
+set_from_resource $color8 i3wm.color8 #784830
+set_from_resource $color9 i3wm.color9 #f0d878
+
+# Set color scheme and configure bar
+
+# class                 border      bground    text      indicator    child_border
+client.focused          $color4     $color3    $color0   $color6      $color3
+client.focused_inactive $color5     $color1    $color9   $color5      $color1
+client.unfocused        $color8     $color2    $color6   $color5      $color2
+client.urgent           $color9     $color1    $color0   $color9      $color1
+client.placeholder      $color0     $color2    $color7   $color0      $color2
+
+client.background       $color2
+
+bar {
+  colors {
+    background $color0
+    statusline $color7
+    separator  $color5
+
+    focused_workspace  $color4  $color3  $color0
+    active_workspace   $color1  $color6  $color9
+    inactive_workspace $color5  $color2  $color6
+    urgent_workspace   $color9  $color1  $color0
+    binding_mode       $color9  $color1  $color0
+  }
+
+  status_command i3status
+}
+
