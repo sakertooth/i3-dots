@@ -100,7 +100,7 @@ plugins=(git)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias dot='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
+alias dots='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
@@ -120,4 +120,27 @@ if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
 fi
 
 # dotfiles alias (i3)
-alias dot='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias dots='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# set environment variables
+export EDITOR=nvim
+
+export CC="clang"
+export CXX="clang++"
+
+export CMAKE_GENERATOR=Ninja
+export CMAKE_BUILD_PARALLEL_LEVEL=8
+export CMAKE_COLOR_DIAGNOSTICS=ON
+export CMAKE_EXPORT_COMPILE_COMMANDS=ON
+export CMAKE_C_COMPILER_LAUNCHER=ccache
+export CMAKE_CXX_COMPILER_LAUNCHER=ccache
+
+# TexLive
+export INFOPATH="/usr/local/texlive/2026/texmf-dist/doc/info:$INFOPATH"
+export MANPATH="/usr/local/texlive/2026/texmf-dist/doc/info:$MANPATH"
+export PATH="/usr/local/texlive/2026/bin/x86_64-linux:$PATH"
+export PATH="/home/saker/.local/bin:$PATH"
+
+# Added by flyctl installer
+export FLYCTL_INSTALL="/home/saker/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
