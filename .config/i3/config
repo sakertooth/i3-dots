@@ -41,7 +41,7 @@ exec --no-startup-id i3-sensible-terminal
 exec --no-startup-id ~/.fehbg
 
 # Start picom (compositor)
-exec --no-startup-id picom -b --fade-in-step=1 --fade-out-step=1 --fade-delta=0=
+exec --no-startup-id picom -b --fade-in-step=1 --fade-out-step=1 --fade-delta=0
 
 # Start redshift (night light)
 exec --no-startup-id redshift
